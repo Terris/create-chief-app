@@ -9,5 +9,8 @@
   "engines": {
     "node": ">=12",
     "yarn": ">=1.15"
+  },
+  "scripts": {
+    "start": "yarn workspace web start"
   }
 }

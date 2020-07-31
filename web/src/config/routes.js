@@ -1,5 +1,6 @@
 import { generatePath } from 'react-router'
-import * as PAGES from 'src/pages'
+import * as PAGES from 'pages'
+
 // generatePath('/user/:id/:entity(posts|comments)', {
 //   id: 1,
 //   entity: 'posts',
@@ -8,8 +9,7 @@ import * as PAGES from 'src/pages'
 export const ROUTES = {
   HOME: {
     NAME: 'home',
-    PATH: '/home',
-    ROUTE: (params) => generatePath(this.PATH, params),
+    PATH: (params) => generatePath('/', params),
     COMPONENT: PAGES.HomePage,
   },
 }
