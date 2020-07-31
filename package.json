@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "api",
+      "web"
+    ]
+  },
+  "engines": {
+    "node": ">=12",
+    "yarn": ">=1.15"
+  }
+}
