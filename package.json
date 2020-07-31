@@ -11,6 +11,10 @@
     "yarn": ">=1.15"
   },
   "scripts": {
-    "start": "yarn workspace web start"
+    "start": "yarn workspace web start",
+    "plop": "plop"
+  },
+  "devDependencies": {
+    "plop": "^2.7.4"
   }
 }
