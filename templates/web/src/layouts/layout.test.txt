@@ -1,0 +1,13 @@
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import { {{pascalCase name}}Layout } from './Layout'
+
+test('renders without crashing', () => {
+  const TestChild = () => <h1>Test Child Component</h1>
+  render(
+    <{{pascalCase name}}Layout>
+      <TestChild />
+    </{{pascalCase name}}Layout>
+  )
+  expect(screen.queryByText(/Test Child Component/i)).toBeInTheDocument()
+})

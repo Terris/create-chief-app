@@ -74,7 +74,13 @@ module.exports = function (plop) {
     prompts: [
       {
         name: 'name',
-        message: 'Component name please',
+        message: 'Layout name?',
+        validate: function (value) {
+          if (/.+/.test(value)) {
+            return true
+          }
+          return 'name is required'
+        },
       },
     ],
     actions: [
@@ -100,13 +106,57 @@ module.exports = function (plop) {
         path: 'web/src/components/index.js',
         pattern: /(\/\/ PLOP - APPEND IMPORT HERE)/gi,
         template:
-          "import { {{pascalCase name}} } from './{{pascalCase name}}/{{pascalCase name}}/'\n// PLOP - APPEND IMPORT HERE",
+          "import { {{pascalCase name}} } from './{{pascalCase name}}/{{pascalCase name}}'\n// PLOP - APPEND IMPORT HERE",
       },
       {
         type: 'modify',
         path: 'web/src/components/index.js',
         pattern: /(\/\/ PLOP - APPEND EXPORT HERE)/gi,
         template: '{{pascalCase name}},\n  // PLOP - APPEND EXPORT HERE',
+      },
+    ],
+  })
+
+  // LAYOUT
+  plop.setGenerator('layout', {
+    description: 'Create a layout component in the the layouts directory',
+    prompts: [
+      {
+        name: 'name',
+        message: 'Layout name?',
+        validate: function (value) {
+          if (/.+/.test(value)) {
+            return true
+          }
+          return 'name is required'
+        },
+      },
+    ],
+    actions: [
+      {
+        type: 'add',
+        path:
+          'web/src/layouts/{{pascalCase name}}Layout/{{pascalCase name}}Layout.js',
+        templateFile: 'templates/web/src/layouts/layout.txt',
+      },
+      {
+        type: 'add',
+        path:
+          'web/src/layouts/{{pascalCase name}}Layout/{{pascalCase name}}Layout.test.js',
+        templateFile: 'templates/web/src/layouts/layout.test.txt',
+      },
+      {
+        type: 'modify',
+        path: 'web/src/layouts/index.js',
+        pattern: /(\/\/ PLOP - APPEND IMPORT HERE)/gi,
+        template:
+          "import { {{pascalCase name}} } from './{{pascalCase name}}Layout/{{pascalCase name}}Layout'\n  // PLOP - APPEND IMPORT HERE",
+      },
+      {
+        type: 'modify',
+        path: 'web/src/layouts/index.js',
+        pattern: /(\/\/ PLOP - APPEND EXPORT HERE)/gi,
+        template: '{{pascalCase name}}Layout,\n  // PLOP - APPEND EXPORT HERE',
       },
     ],
   })
