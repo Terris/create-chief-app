@@ -1,5 +1,1 @@
-# CREATE CHIEF APP
-
-```bash
-yarn create chief-app
-```
+# Create Chief App
