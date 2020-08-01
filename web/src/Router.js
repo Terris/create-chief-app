@@ -5,7 +5,12 @@ import { ROUTES } from './config'
 export const Router = () => (
   <BrowserRouter>
     <Switch>
-      <Route path={ROUTES.HOME.PATH()} component={ROUTES.HOME.COMPONENT} />
+      <Route
+        exact
+        path={ROUTES.HOME.PATH()}
+        component={ROUTES.HOME.COMPONENT}
+      />
+      {/* PLOP - APPEND ROUTE HERE */}
     </Switch>
   </BrowserRouter>
 )

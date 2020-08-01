@@ -1,9 +1,8 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import { Router } from './Router'
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+test('renders without crashing', () => {
+  render(<Router />)
+  expect(screen.getByText(/Home/i)).toBeInTheDocument()
+})

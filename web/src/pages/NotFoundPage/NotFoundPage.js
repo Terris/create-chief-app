@@ -1,10 +1,10 @@
 import React from 'react'
 import { Layout } from 'layouts'
 
-export const HomePage = () => {
+export const NotFoundPage = () => {
   return (
     <Layout>
-      <h1>Home Page</h1>
+      <h1>Not Found</h1>
     </Layout>
   )
 }
