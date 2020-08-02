@@ -1,0 +1,33 @@
+{
+  "name": "api",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint dist/index.js -c eslint.dist.json --no-eslintrc",
+    "setup": "firebase use --add",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "build": "parcel build src/index.js --no-source-maps",
+    "serve": "firebase emulators:start --only functions",
+    "predeploy": "yarn build",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "12"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.16.1",
+    "express": "^4.17.1",
+    "firebase-admin": "^8.10.0",
+    "firebase-functions": "^3.6.1",
+    "graphql": "^15.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "firebase-functions-test": "^0.2.0",
+    "parcel": "^2.0.0-beta.1"
+  },
+  "private": true
+}

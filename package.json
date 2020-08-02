@@ -16,5 +16,14 @@
   },
   "devDependencies": {
     "plop": "^2.7.4"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "ignorePatterns": [
+      "api/dist/*.js"
+    ]
   }
 }
