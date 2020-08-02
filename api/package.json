@@ -6,7 +6,7 @@
     "lint": "eslint dist/index.js -c eslint.dist.json --no-eslintrc",
     "setup": "firebase use --add",
     "shell": "firebase functions:shell",
-    "start": "npm run shell",
+    "start": "yarn build && yarn serve",
     "build": "parcel build src/index.js --no-source-maps",
     "serve": "firebase emulators:start --only functions",
     "predeploy": "yarn build",

@@ -1,10 +1,9 @@
-import { firebaseAdmin } from '../lib/firebase/admin'
-
-export const users = () => {
-  return firebaseAdmin
-    .database()
-    .ref('users')
-    .once('value')
-    .then((snap) => snap.val())
-    .then((val) => val)
+import { db } from '../lib/firebase/admin'
+export const users = async () => {
+  const users = await db
+    .collection('users')
+    .get()
+    .then((res) => res.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+    .catch((error) => error)
+  return users
 }

@@ -10,3 +10,4 @@ export const firebaseAdmin = admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: 'https://create-chief-app.firebaseio.com',
 })
+export const db = firebaseAdmin.firestore()
