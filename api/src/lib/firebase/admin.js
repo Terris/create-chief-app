@@ -1,5 +1,5 @@
 import admin from 'firebase-admin'
-import serviceAccount from './serviceAccount.json'
+import serviceAccount from './serviceAccount.credentials.json'
 // To generate a private key file for your service account:
 // 1. In the Firebase console, open Settings > Service Accounts.
 // 2. Click Generate New Private Key, then confirm by clicking Generate Key.
