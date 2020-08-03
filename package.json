@@ -29,5 +29,8 @@
     "ignorePatterns": [
       "api/dist/*.js"
     ]
+  },
+  "dependencies": {
+    "chief-web": "0.4.0"
   }
 }

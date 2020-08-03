@@ -1,11 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Router } from './Router'
+import { ChiefProvider } from 'chief-web'
+import { Router } from 'src/Router'
+import { apolloClient } from 'src/lib/apollo'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router />
+    <ChiefProvider apolloClient={apolloClient}>
+      <Router />
+    </ChiefProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )

@@ -4584,6 +4584,26 @@ chardet@^0.7.0:
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
+chief-web@0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/chief-web/-/chief-web-0.4.0.tgz#a1a421747b28db9201d158c1c0ecaac686132f8f"
+  integrity sha512-sVUCyPRS+ALHuQtpDmxeCrn8qO4mMS+auqANAblSvFsFdNs08FMWXZEcl/wlVEq6chji4XqJS85v0eomBrhqSQ==
+  dependencies:
+    "@apollo/client" "^3.1.1"
+    graphql "^15.3.0"
+    prop-types "^15.7.2"
+    react "^16.13.1"
+
+chief-web@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/chief-web/-/chief-web-0.5.0.tgz#31c94ff6f31faefc8c52da73fda6693765664d39"
+  integrity sha512-W7MxqzZZn8XdovpXD1uLilltLbIoaN5VfKOnhrPZzNm0QWpmAtGIP8wTTbZjs8TF2BqJdPDelKMIWeRsX63p+A==
+  dependencies:
+    "@apollo/client" "^3.1.1"
+    graphql "^15.3.0"
+    prop-types "^15.7.2"
+    react "^16.13.1"
+
 chokidar@^2.1.8:
   version "2.1.8"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.1.8.tgz#804b3a7b6a99358c3c5c61e71d8728f041cff917"
