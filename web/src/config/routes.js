@@ -1,5 +1,5 @@
 import { generatePath } from 'react-router'
-import * as PAGES from 'pages'
+import * as PAGES from 'src/pages'
 
 export const ROUTES = {
   HOME: {

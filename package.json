@@ -11,10 +11,11 @@
     "yarn": ">=1.15"
   },
   "scripts": {
-    "start": "yarn workspace web start",
+    "start": "concurrently \"yarn workspace web start\" \"yarn workspace api start\"",
     "plop": "plop"
   },
   "devDependencies": {
+    "concurrently": "^5.2.0",
     "plop": "^2.7.4"
   },
   "eslintConfig": {
