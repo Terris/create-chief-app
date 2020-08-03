@@ -11,8 +11,11 @@
     "yarn": ">=1.15"
   },
   "scripts": {
-    "start": "concurrently \"yarn workspace web start\" \"yarn workspace api start\"",
-    "plop": "plop"
+    "start": "concurrently \"yarn workspace api start\" \"yarn workspace web start\"",
+    "start:web": "yarn workspace web start",
+    "start:api": "yarn workspace api start",
+    "plop": "plop",
+    "make": "yarn plop"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
