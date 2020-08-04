@@ -1,0 +1,31 @@
+import React from 'react'
+import { {{pascalCase name}}Reducer } from './{{pascalCase name}}Reducer'
+
+// SETUP
+export const initialState = { {{camelCase name}}: null }
+export const {{pascalCase name}}Context = React.createContext(initialState)
+export const use{{pascalCase name}} = () => React.useContext({{pascalCase name}}Context)
+
+// PROVIDER
+export const {{pascalCase name}}Provider = ({ children }) => {
+  const [state, dispatch] = React.useReducer({{pascalCase name}}Reducer, initialState)
+
+  // dispatch actions
+  const set = () => {
+    dispatch({
+      type: 'SET',
+      payload: { "foobar" },
+    })
+  }
+
+  return (
+    <{{pascalCase name}}Context.Provider
+      value=\{{
+        {{camelCase name}}: state,
+        set,
+      }}
+    >
+      {children}
+    </{{pascalCase name}}Context.Provider>
+  )
+}

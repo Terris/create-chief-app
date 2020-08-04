@@ -1,0 +1,11 @@
+export const {{pascalCase name}}Reducer = (state, action) => {
+  switch (action.type) {
+    case 'SET': {
+      const newState = { ...state }
+      return newState
+    }
+
+    default:
+      return state
+  }
+}
