@@ -2,17 +2,19 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { ApolloProvider } from '@apollo/client'
 import { AuthProvider } from 'src/context'
-import { Router } from 'src/components'
+import { ErrorBoundary, Router } from 'src/components'
 import { apolloClient } from 'src/lib/apollo'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
   <React.StrictMode>
-    <ApolloProvider client={apolloClient}>
-      <AuthProvider>
-        <Router />
-      </AuthProvider>
-    </ApolloProvider>
+    <ErrorBoundary>
+      <ApolloProvider client={apolloClient}>
+        <AuthProvider>
+          <Router />
+        </AuthProvider>
+      </ApolloProvider>
+    </ErrorBoundary>
   </React.StrictMode>,
   document.getElementById('root')
 )
