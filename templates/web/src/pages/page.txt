@@ -4,7 +4,7 @@ import { Layout } from 'layouts'
 export const {{pascalCase name}}Page = () => {
   return (
     <Layout>
-      <h1>{{pascalCase name}}</h1>
+      <h1>{{pascalCase name}} Page</h1>
     </Layout>
   )
 }

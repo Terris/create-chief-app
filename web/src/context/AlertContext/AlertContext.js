@@ -11,7 +11,7 @@ export const AlertProvider = ({ children }) => {
   const [state, dispatch] = React.useReducer(AlertReducer, initialState)
 
   // dispatch actions
-  const registerError = async ({ error }) => {
+  const registerError = async (error) => {
     dispatch({
       type: 'REGISTER_ERROR',
       payload: { error },

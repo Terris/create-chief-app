@@ -1,9 +1,2 @@
-import { https } from 'firebase-functions'
-import express from 'express'
-import { ApolloServer, gql } from 'apollo-server-express'
-import { schema } from './schema'
-
-const app = express()
-const server = new ApolloServer({ schema, playground: true })
-server.applyMiddleware({ app, path: '/', cors: true })
-export const graphql = https.onRequest(app)
+import { graphql } from './graphql'
+export { graphql }
