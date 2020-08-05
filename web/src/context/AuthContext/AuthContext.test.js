@@ -6,35 +6,7 @@ import { AlertProvider } from '../AlertContext/AlertContext'
 // SETUP
 const mockValidCreds = { email: 'foo@example.com', password: 'foobarbaz' }
 const mockInvalidCreds = { email: 'nope@example.com', password: 'bazbuckle' }
-jest.mock('src/lib/firebase', () => {
-  return {
-    firebase: {
-      auth: jest.fn(() => {
-        const resolveOrReject = (email, password) => {
-          return new Promise((resolve, reject) => {
-            if (
-              email === mockValidCreds.email &&
-              password === mockValidCreds.password
-            ) {
-              resolve({ user: { email } })
-            } else {
-              reject(new Error('Incorrect credentials!'))
-            }
-          })
-        }
-        return {
-          onAuthStateChanged: () => jest.fn(),
-          createUserWithEmailAndPassword: (email, password) =>
-            resolveOrReject(email, password),
-          signInWithEmailAndPassword: (email, password) =>
-            resolveOrReject(email, password),
-          signOut: () => jest.fn(),
-        }
-      }),
-    },
-  }
-})
-
+jest.mock('src/lib/firebase')
 test('it renders and gets/sets context as expected', async () => {
   const TestChildComponent = () => {
     const { currentUser, isAuthenticated, signUp, signOut, signIn } = useAuth()
