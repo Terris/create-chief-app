@@ -8,7 +8,6 @@ const TestComponent = () => {
   const [isCorrect, setIsCorrect] = React.useState(false)
   const [error, setError] = React.useState(null)
   const onSubmit = (data) => {
-    console.log('DATA: ', data)
     setIsCorrect(false)
     setError(null)
     if (data.secretPasscode === validSecret) {
@@ -52,6 +51,7 @@ test('renders and behaves as expected', async () => {
   fireEvent.click(submit)
   await waitFor(() => {
     expect(screen.getByText(/You shall not pass!/i)).toBeInTheDocument()
+    expect(screen.queryByText(/You may enter./i)).toBe(null)
   })
   // submit with valid value
   // should show form data
@@ -62,5 +62,6 @@ test('renders and behaves as expected', async () => {
   fireEvent.click(submit)
   await waitFor(() => {
     expect(screen.getByText(/You may enter./i)).toBeInTheDocument()
+    expect(screen.queryByText(/You shall not pass!/i)).toBe(null)
   })
 })
