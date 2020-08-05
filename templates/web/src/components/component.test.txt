@@ -4,5 +4,5 @@ import { {{pascalCase name}} } from './{{pascalCase name}}'
 
 test('renders without crashing', () => {
   render(<{{pascalCase name}} />)
-  expect(screen.getByText(/{{pascalCase name}} Component/i)).toBeInTheDocument()
+  expect(screen.getByText(/{{titleCase name}} Component/i)).toBeInTheDocument()
 })
