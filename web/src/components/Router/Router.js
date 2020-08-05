@@ -11,6 +11,10 @@ export const Router = () => (
         component={ROUTES.HOME.COMPONENT}
       />
       {/* PLOP - APPEND ROUTE HERE */}
+      <Route
+        path={ROUTES.NOT_FOUND.PATH}
+        component={ROUTES.NOT_FOUND.COMPONENT}
+      />
     </Switch>
   </BrowserRouter>
 )
