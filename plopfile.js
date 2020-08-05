@@ -50,7 +50,7 @@ module.exports = function (plop) {
       // Add Route to router component
       {
         type: 'modify',
-        path: 'web/src/components/Router.js',
+        path: 'web/src/components/Router/Router.js',
         pattern: /({\/\* PLOP - APPEND ROUTE HERE \*\/})/gi,
         template:
           '<Route exact path={ROUTES.{{constantCase name}}.PATH()} component={ROUTES.{{constantCase name}}.COMPONENT}/>\n  {/* PLOP - APPEND ROUTE HERE */}',
