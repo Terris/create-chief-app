@@ -8,14 +8,15 @@
     "@testing-library/jest-dom": "^5.11.2",
     "@testing-library/react": "^10.4.7",
     "@testing-library/user-event": "^12.1.0",
+    "concurrently": "^5.2.0",
     "firebase": "^7.17.1",
     "graphql": "^15.3.0",
     "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^17.0.01",
+    "react-dom": "^17.0.01",
     "react-hook-form": "^6.3.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
