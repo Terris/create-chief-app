@@ -5,18 +5,19 @@
   "dependencies": {
     "@apollo/client": "^3.1.1",
     "@emotion/core": "^10.0.28",
-    "@testing-library/jest-dom": "^5.11.2",
-    "@testing-library/react": "^10.4.7",
-    "@testing-library/user-event": "^12.1.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
     "concurrently": "^5.2.0",
-    "firebase": "^7.17.1",
-    "graphql": "^15.3.0",
+    "firebase": "^8.2.1",
+    "graphql": "^15.4.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.01",
     "react-dom": "^17.0.01",
     "react-hook-form": "^6.3.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1"
+    "react-scripts": "4.0.1",
+    "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,8 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "jest-environment-jsdom-sixteen": "^1.0.3"
   }
 }
